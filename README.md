@@ -132,4 +132,4 @@ secure-session-management/
 ## License
 
 MIT — see [LICENSE](LICENSE) for details. This code is educational; do not deploy the vulnerable module outside localhost.
-# Secure-Session-Management-Project
+

@@ -9,9 +9,6 @@ data/users.db
 # --- Academic drafts ---
 REPORT_TEMPLATE.md
 
-# --- Lab screenshots ---
-*.png
-
 # --- PHP runtime artifacts ---
 php_error.log
 *.log
