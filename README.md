@@ -22,6 +22,22 @@ Same login flow, but the session ID rotates after authentication, cookies carry 
 
 ---
 
+## Project Overview
+
+A side-by-side PHP lab that exposes common session vulnerabilities and shows exactly how to fix them. Each concept is demonstrated in two parallel modules — an intentionally vulnerable one and a hardened one — so you can compare behaviour in real time.
+
+**What it covers:**
+
+- **Session fixation** — forced session IDs vs. `session_regenerate_id(true)` at the privilege boundary
+- **Cookie security** — HttpOnly / Secure / SameSite flags and strict-mode enforcement
+- **Timeouts** — idle (5 min) and absolute (30 min) expiry, checked on every authenticated request
+- **CSRF protection** — token-based validation with timing-safe `hash_equals` comparison
+- **Proper logout** — POST-only, full session teardown
+
+**Tech:** PHP 8+ · SQLite via PDO · vanilla HTML/CSS · no framework, no external services
+
+---
+
 ## What it covers
 
 | Concept | Vulnerable implementation | Hardened implementation |
@@ -132,4 +148,32 @@ secure-session-management/
 ## License
 
 MIT — see [LICENSE](LICENSE) for details. This code is educational; do not deploy the vulnerable module outside localhost.
+
+---
+
+## Share / Contribute
+
+This project is part of a cybersecurity coursework portfolio. Copy-paste-ready blurbs for sharing:
+
+**Short (Projects section):**
+
+> Secure Session Management Lab — a side-by-side PHP lab comparing an intentionally vulnerable session implementation against a hardened one. Covers session fixation, cookie security (HttpOnly/Secure/SameSite), idle/absolute timeouts, CSRF protection, and proper logout. PHP 8 + SQLite, no framework. [github.com/PrakarshKaushik11/Secure-Session-Management-Project](https://github.com/PrakarshKaushik11/Secure-Session-Management-Project)
+
+**Long (post):**
+
+> 🛡️ New project: **Secure Session Management Lab**
+>
+> Built a side-by-side PHP lab that exposes common session vulnerabilities and shows exactly how to fix them — comparing an intentionally vulnerable module against a hardened one:
+>
+> • **Session fixation** — forced session IDs vs. `session_regenerate_id(true)` at the privilege boundary
+> • **Cookie security** — HttpOnly/Secure/SameSite flags, strict-mode enforcement
+> • **Timeouts** — idle (5 min) + absolute (30 min) expiry, checked on every authenticated request
+> • **CSRF protection** — token-based validation with timing-safe `hash_equals` comparison
+> • **Proper logout** — POST-only, full session teardown
+>
+> Pure PHP 8 + SQLite, no framework, no external services. Each module has a live comparison dashboard so you can audit cookie attributes and session behaviour in real time.
+>
+> GitHub: [PrakarshKaushik11/Secure-Session-Management-Project](https://github.com/PrakarshKaushik11/Secure-Session-Management-Project)
+>
+> #cybersecurity #php #websecurity #sessionmanagement #owasp
 
